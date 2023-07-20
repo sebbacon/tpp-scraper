@@ -7,7 +7,7 @@ import os
 
 try:
     os.remove("records.db")
-except FileNotFound:
+except FileNotFoundError:
     pass
 con = sqlite3.connect("records.db")
 cur = con.cursor()
